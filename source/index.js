@@ -1,7 +1,7 @@
-import Minio from 'minio';
+import * as Minio from 'minio';
 import es from 'event-stream';
 import PluginError from 'plugin-error';
-import { lookup } from 'mime';
+import * as mime from 'mime';
 
 // Consts
 const PLUGIN_NAME = 'gulp-minio';
@@ -20,7 +20,7 @@ function gulpMinio(bucket, config) {
       return;
     }
 
-    let meta = { 'Content-Type': lookup(file.path) };
+    let meta = { 'Content-Type': mime.lookup(file.path) };
 
     client.fPutObject(bucket, file.relative, file.path, meta, err => {
       if (err)
