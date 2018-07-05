@@ -61,4 +61,4 @@ typings/
 .next
 
 # transpiled files
-distribution/
+dist/
