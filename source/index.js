@@ -13,11 +13,12 @@ function gulpMinio(bucket, config) {
   if (!bucket)
     throw new PluginError(PLUGIN_NAME, 'Missing the name of chosen bucket!');
 
-  client = new Minio.Client(config)
+  let client = new Minio.Client(config)
 
   return es.map((file, cb) => {
-    if (file.isDirectory())
-      continue;
+    if (file.isDirectory()){
+      return;
+    }
 
     let meta = { 'Content-Type': lookup(file.path) };
 

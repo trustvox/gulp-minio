@@ -1,10 +1,12 @@
 {
   "name": "gulp-minio",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "A gulp plugin to publish files to minio s3",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel source --out-dir distribution",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,9 @@
     "plugin-error": "^1.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "@babel/cli": "^7.0.0-beta.51",
     "coveralls": "^3.0.2",
     "mocha": "^5.2.0"
   }
