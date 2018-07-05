@@ -1,6 +1,6 @@
 {
   "name": "gulp-minio",
-  "version": "0.0.8",
+  "version": "0.0.11",
   "description": "A gulp plugin to publish files to minio s3",
   "main": "./distribution/index.js",
   "module": "./source/index.js",
@@ -28,14 +28,15 @@
   "homepage": "https://github.com/brunoocasali/gulp-minio#readme",
   "dependencies": {
     "event-stream": "^3.3.4",
-    "mime": "^2.3.1",
+    "mime-types": "^2.1.18",
     "minio": "^6.0.0",
     "plugin-error": "^1.0.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.51",
     "@babel/core": "^7.0.0-beta.51",
     "@babel/preset-env": "^7.0.0-beta.51",
-    "@babel/cli": "^7.0.0-beta.51",
+    "babel-plugin-add-module-exports": "^0.3.1",
     "coveralls": "^3.0.2",
     "mocha": "^5.2.0"
   }

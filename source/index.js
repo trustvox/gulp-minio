@@ -1,9 +1,8 @@
-import * as Minio from 'minio';
 import es from 'event-stream';
 import PluginError from 'plugin-error';
-import * as mime from 'mime';
+import { Client } from 'minio';
+import { lookup } from 'mime-types';
 
-// Consts
 const PLUGIN_NAME = 'gulp-minio';
 
 function gulpMinio(bucket, config) {
@@ -13,14 +12,14 @@ function gulpMinio(bucket, config) {
   if (!bucket)
     throw new PluginError(PLUGIN_NAME, 'Missing the name of chosen bucket!');
 
-  let client = new Minio.Client(config)
+  let client = new Client(config)
 
   return es.map((file, cb) => {
     if (file.isDirectory()){
       return;
     }
 
-    let meta = { 'Content-Type': mime.lookup(file.path) };
+    let meta = { 'Content-Type': lookup(file.path) };
 
     client.fPutObject(bucket, file.relative, file.path, meta, err => {
       if (err)
