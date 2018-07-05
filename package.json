@@ -1,0 +1,35 @@
+{
+  "name": "gulp-minio",
+  "version": "1.0.0",
+  "description": "A gulp plugin to publish files to minio s3",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunoocasali/gulp-minio.git"
+  },
+  "keywords": [
+    "gulpplugin"
+  ],
+  "author": {
+    "name": "Bruno Casali",
+    "email": "hi@brunoocasali.xyz",
+    "url": "https://brunoocasali.xyz"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brunoocasali/gulp-minio/issues"
+  },
+  "homepage": "https://github.com/brunoocasali/gulp-minio#readme",
+  "dependencies": {
+    "mime": "^2.3.1",
+    "minio": "^6.0.0",
+    "plugin-error": "^1.0.1"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "mocha": "^5.2.0"
+  }
+}
