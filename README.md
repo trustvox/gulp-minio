@@ -1,8 +1,4 @@
 # gulp-minio
-A gulp plugin to deploy static files to minio
-
-
-# gulp-minio
 > A gulp plugin to publish files to minio s3
 
 ## Usage
@@ -16,6 +12,6 @@ npm install --save-dev gulp-minio
 Then, add it to your `gulpfile.js`:
 
 ### Simple string replace
-```javascript
+```js
 var minio = require('gulp-minio');
 ```
