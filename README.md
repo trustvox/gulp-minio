@@ -1,6 +1,7 @@
 # gulp-minio
 > A gulp plugin to publish files to minio s3
 
+[![Build Status](https://travis-ci.org/brunoocasali/gulp-minio.svg?branch=master)](https://travis-ci.org/brunoocasali/gulp-minio)
 ![npm](https://img.shields.io/npm/v/gulp-minio.svg)
 
 ## Install
