@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "module": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "ava",
     "build": "babel src --out-dir dist",
     "prepublishOnly": "npm run build"
   },
@@ -33,11 +33,25 @@
     "plugin-error": "^1.0.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.51",
-    "@babel/core": "^7.0.0-beta.51",
-    "@babel/preset-env": "^7.0.0-beta.51",
+    "@babel/cli": "^7.0.0-beta.52",
+    "@babel/core": "^7.0.0-beta.52",
+    "@babel/polyfill": "^7.0.0-beta.52",
+    "@babel/preset-env": "^7.0.0-beta.52",
+    "@babel/register": "^7.0.0-beta.52",
+    "ava": "1.0.0-beta.6",
     "babel-plugin-add-module-exports": "^0.3.1",
-    "coveralls": "^3.0.2",
-    "mocha": "^5.2.0"
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "vinyl": "^2.2.0"
+  },
+  "engines": {
+    "node": ">=8.0",
+    "npm": ">=5.6.0"
+  },
+  "ava": {
+    "require": [
+      "@babel/register",
+      "@babel/preset-env",
+      "@babel/polyfill"
+    ]
   }
 }
