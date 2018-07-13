@@ -21,8 +21,10 @@ function gulpMinio(bucket, config) {
     let meta = { 'Content-Type': lookup(file.path) };
 
     client.fPutObject(bucket, file.relative, file.path, meta, err => {
-      if (err)
-        throw new PluginError(PLUGIN_NAME, `Error processing ${file} to minio`);
+      if (err) {
+        let message = `Error processing ${file.path} to minio`;
+        throw new PluginError(PLUGIN_NAME, message);
+      }
     });
 
     return cb();
