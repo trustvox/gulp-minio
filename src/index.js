@@ -22,7 +22,9 @@ function gulpMinio(bucket, config) {
 
     client.fPutObject(bucket, file.relative, file.path, meta, err => {
       if (err) {
-        let message = `Error processing ${file.path} to minio`;
+        let message = `The file "${file.path}, was not processed by minio, ` +
+                      `ERROR by minio was: ${err}`;
+
         throw new PluginError(PLUGIN_NAME, message);
       }
     });
