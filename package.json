@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brunoocasali/gulp-minio.git"
+    "url": "git+https://github.com/trustvox/gulp-minio.git"
   },
   "keywords": [
     "gulpplugin"
@@ -23,9 +23,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/brunoocasali/gulp-minio/issues"
+    "url": "https://github.com/trustvox/gulp-minio/issues"
   },
-  "homepage": "https://github.com/brunoocasali/gulp-minio#readme",
+  "homepage": "https://github.com/trustvox/gulp-minio#readme",
   "dependencies": {
     "event-stream": "^3.3.4",
     "mime-types": "^2.1.18",
